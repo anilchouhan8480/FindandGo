@@ -1,0 +1,214 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../images/coffe1.jpg);
+	background-size: 180%;
+	background-position: -400px 0px;
+	
+}
+a{
+	text-decoration: none;
+}
+header{
+	width: 100%;
+	background: transparent;
+	position: fixed;
+	box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+}
+.head{
+  background-color: #f1f1f1;
+
+  
+  
+}
+
+.logoclass{
+	width: 80%;
+	margin: 0 auto ;
+}
+
+.logo{
+
+	font-size: 2em;
+	float: left;
+	padding: 3px;
+	color: #0f775b;
+	margin-top: 10px;
+
+}
+
+.nav{
+
+	float: right;
+	width: 50%;
+	margin: 0 auto;
+	line-height: 5px;
+	margin-top: 13px;	
+
+}
+
+.ul_li{
+	display: inline-block;
+	padding: 0 10px;
+
+}
+
+.li_a{
+	text-decoration: none;
+    color: #0f775b;
+    font-size: 2em;
+    margin-top: 09px;
+    margin-left: 15px;
+    float: right;
+    padding: 4px;
+    font-weight: bold;
+
+}
+
+.img_face{
+	margin-bottom: -12px;
+    margin-left: 77px;
+}
+
+header, .logo, li a 
+{
+	transition: all 0.1s;
+}
+
+.small{
+	height: 50px;
+	background: #0f775b;
+
+}
+
+.small .logo {
+	font-size: 2.6em;
+	margin-top: 3px;
+	color: #fff;
+
+}
+
+.small li a {
+	font-size: 1.6em;
+	margin-top: 15px;
+	color: #fff;
+}
+
+
+.main{
+   width: 400px;
+   margin: 10px auto 10px auto;
+
+}
+
+.li_aa{
+	text-decoration: none;
+    color: #0f775b;
+    font-size: 2.8em;
+    margin-top: 11px;
+    float: right;
+    padding: 4px;
+    font-weight: bold;
+
+}
+h2{
+	text-align: center;
+	padding: 20px;
+	font-family: sans-serif;
+}
+div .register{
+	background-color: rgb(13 99 51 / 50%);
+	width: 130%;
+	font-size: 18px;
+	border-radius: 10px;
+	border : 1px solid rgba(255,255,255,255.3);
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+	color: #fff;
+	margin-top: -94px;
+}
+form#register{
+    margin: 40px;
+}
+label{
+	font-family: sans-serif;
+	font-size: 18px;
+	font-style: italic;
+
+}
+
+input{
+	width: 300px;
+	border: 1px solid #ddd;
+	border-radius: 16px;
+	outline: 0;
+	padding: 7px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);	
+}
+.dropdown-content{
+/*	display: none;*/
+	position: absolute;
+	border-radius: 16px;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+
+}
+.dropbtn {
+	width: 315px;
+	border: 1px solid #ddd;
+	border-radius: 16px;
+	outline: 0;
+	padding: 7px;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);	
+}
+
+
+
+.bname{
+	width: 300px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 7px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);	
+}
+.passwd{
+	width: 300px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	outline: 0;
+	padding: 7px;
+	background-color: #fff;
+	box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);	
+}
+
+
+input#submit{
+	width: 200px;
+	padding: 7px;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: rgba(250,100,0,0.8);
+	color: #fff;
+	cursor: pointer;
+	border: 1px solid rgba(255,255,255,255.3);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+}
+.mrgn{
+	margin-bottom: 25px;
+}
+
+.submit_btn{
+ margin-left: 110px;
+ margin-top: 40px;
+}
+
+

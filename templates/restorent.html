@@ -1,0 +1,39 @@
+{% extends 'category.html' %}
+{% load static %}
+{% block 'maindata' %}
+
+    	{% block 'title' %}
+		Restorent
+		{% endblock %}
+
+	{% block 'extralink' %}
+	   <link href="{% static 'css/barbar.css' %}" rel="stylesheet">
+	{% endblock %}
+
+<div class="continer-fluid">
+	<div class="container"><br>
+			<h1>Restorents</h1>
+			{% csrf_token %}
+			<div class="col-md-8" style="margin-top: 10px;">
+				{% for i in rOBj %}
+				<div class="container img_border">
+
+					<div class="col-md-6">
+						
+					  <img class="img_size" src="{{ i.biz_img.url }}">
+          			</div>
+					<div class="col-md-6 box_brbr"><a class="h3_brbr" href="#"  id="img_border" ></a>
+						 
+					  	<h6>{{i.business_name}}</h6>
+					    <p>{{i.street}}</p>
+					    <p>{{i.area}}</p>
+					    <p>{{i.city}}</p><br><br><br>
+					
+					</div><br><br><br><br><br><br>
+				</div><br><br><br><br><br><br> 
+				{% endfor %}
+	</div>			
+</div>
+
+
+{% endblock %}

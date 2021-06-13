@@ -1,0 +1,62 @@
+
+/*h1{
+	color: white;
+	font-size: 3.4375rem;
+    line-height: normal;
+    height: 65px;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+    font-weight: 300;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-bottom: 100px;
+}*/
+body{
+	background: url(../images/enter.jpg);
+	background-size: 100%;
+	background-position: -400px 0px;
+	
+}
+h1{
+    font-size: 5.75rem !important ;
+    margin-left: 211px !important;
+    margin-top: 19px !important;
+}
+
+.img_face{
+	text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.main{
+   width: 400px;
+    margin: -65px 564px 10px auto;
+   }
+
+   div .register{
+    background-color: rgb(35 128 156 / 50%);
+    width: 176%;
+    font-size: 18px;
+    border-radius: 35px;
+    border: 0px solid rgba(255,255,255,255.3);
+    box-shadow: 11px 11px 23px rgb(0 0 0 / 30%);
+    color: #fff;
+}
+
+select{
+	height: 40px;
+}
+input{
+	color: black;
+}
+
+.submit_bttn{
+    margin-left: 110px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+}
+.edit_btn{
+    height: 30px;
+    font-size: 34px;
+
+}

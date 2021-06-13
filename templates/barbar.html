@@ -1,0 +1,60 @@
+{% extends 'category.html' %}
+{% load static %}
+
+    	{% block 'title' %}
+		Barbar
+		{% endblock %}
+
+	{% block 'extralink' %}
+	<link href="{% static 'css/barbar.css' %}" rel="stylesheet">
+	{% endblock %}
+
+
+{% block 'maindata' %}
+<div class="continer-fluid">
+	<div class="container"><br>
+		<h1>BarBar Shops</h1>
+		{% csrf_token %}
+		{% for i in bOBj %}
+		<div class="col-md-8 " style="margin-top: 10px;">
+
+			<div class="container container_1 brdr arrange_1 pading " id="brdr">
+				<div style="margin-top: 20px;">
+					<div class="col-md-6">
+							
+						<img class="img_size" src="{{ i.biz_img.url }}">
+	          		</div>
+					<div class="col-md-6 "><a class="" href="#"  id="img_border" ></a>
+							 
+						<h6>{{i.business_name}}</h6>
+						<h5>Phone No. : {{i.mobile}}</h5>
+						<p style="    margin-bottom: -2px;">Street: {{i.street}}</p>
+						<p style="    margin-top: 7px;">Area : {{i.area}}</p>
+						<p style="    margin-top: -8px;">City: {{i.city}}</p>
+					</div>
+<!-- 					<div class="manage">
+						<div class="col text-center">
+			                <form class="rate-form" action="" method="POST" id="">
+				                <button type="submit" class="fa fa-star fa-3x my-btn" id="first"></button>
+				                <button type="submit" class="fa fa-star fa-3x my-btn" id="second"></button>
+				                <button type="submit" class="fa fa-star fa-3x my-btn" id="third"></button>
+				                <button type="submit" class="fa fa-star fa-3x my-btn" id="fourth"></button>
+				                <button type="submit" class="fa fa-star fa-3x my-btn" id="fifth"></button>
+			                </form>
+		            	</div>
+	            	</div> -->
+            	</div>
+			</div><br><br>
+		</div>
+				{% endfor %}
+<!-- 			<div class="col-md-3">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.2831310003226!2d77.43080831422212!3d23.232781914270447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42679e753069%3A0x2b6206263e27568b!2sAppin%20Technology%20Lab!5e0!3m2!1sen!2sin!4v1614341438709!5m2!1sen!2sin" width="600" height="800" style="border:0.1;" loading="lazy"></iframe>
+				<br><br><br><br>
+		  </div> -->
+
+	</div>			
+</div>
+
+
+{% endblock %}
+

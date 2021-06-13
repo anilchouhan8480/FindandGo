@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+<head>
+	<title>Register</title>
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+<!--     <link href="{% static 'css/style1.css' %}" rel="stylesheet"> -->
+    <link  href="{% static 'css/register.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    <header class="head topline-controller">
+  <div class="logoclass">
+    <a href="/home/" class="logo">Find&Go</a>
+  </div> 
+  <nav class="nav">
+    <ul>
+      <li class="ul_li"><a class="li_a" href="/home/">Home</a></li>
+      <li class="ul_li"><a class="li_a" href="/mainsite/login/">Login</a></li>
+      <li class="ul_li"><a class="li_a" href="/mainsite/contact/">Contact</a></li>
+
+    </ul>
+  </nav>
+</header><br><br><br><br><br><br><br><br>
+    <div class="main">
+    	<div class="register">
+          		<h2>Register here</h2>
+        <form id="register" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+<!--               <label> Business Name : </label> 
+              <br> -->
+              <input style="  border-radius: 16px;" type="text" name="bname" class="bname" id="bname" placeholder="Enter your Business" ;  required>
+              <br><br>
+<!--           		<label>Enter First Name : </label>	
+          		<br> -->
+          		<input type="text" name="first" id="first" placeholder="Enter Your First name"  required>
+          		<br><br>
+<!--               <label>Enter Last Name : </label>  
+              <br> -->
+              <input type="text" name="last" id="last" placeholder="Enter Your Last name"  required>
+              <br><br>
+<!--               <label>type user name : </label>
+              <br> -->
+              <input type="Email" name="email" id="email" placeholder="Enter your Email Address "  required >
+              <br><br>
+              <input type="text" name="username" id="username" placeholder="Choose Username"  required>
+              <br><br>
+<!--           		<label>Enter Email : </label>	
+          		<br> -->
+
+              <input type="password" name="password" class="password" id="passwd" placeholder="Enter password "  required>
+              <br><br>
+
+              <input type="number" class="form-control" name="phone" id="mob" placeholder="Mobile Number" pattern="[0-9]{10)" required>
+              <br><br> 
+              <input type="text" name="address" id="address" placeholder="Street Address "  required>
+              <br><br>
+<!--               <label>Enter Area : </label>
+              <br> -->
+              <input type="text" name="area" id="area" placeholder="Enter Your Area "  required>
+              <br><br>
+
+<!--             <label>Enter City : </label>
+              <br> -->
+              <input type="text" name=city id="city" placeholder="Enter your City"  required>
+              <br><br>
+<!--               <label>Enter Pincode : </label>
+              <br> -->
+              <input type="text" name="pincode" id="pincode" placeholder="Enter your Pincode "  required>
+              <br><br>
+<!--               <div class="form-group"> -->
+              <input type="file" name="b_img"  placeholder="choose Business image" >
+              <br><br>
+<!--               </div> -->
+<!--                <label>Enter Satate : </label>
+              <br> -->
+              <input type="text" name="state" id="state" placeholder="Enter your State "  required>
+              <br><br>
+
+<!--               <label>Select bussines</label><br> -->
+              <select class="dropbtn" name="btype">
+                <option class="dropdown-content">Select your bussiness</option>
+                {% for j in bOBj %}
+                <option class="dropdown-content" value={{ j.id }}>{{ j.bus_Name }}</option>
+                {% endfor %}
+              </select  required>
+
+              <input type="submit" class="submit_btn" value="submit" name="submit" id="submit" >
+        </form>
+    	</div>	
+    </div>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="{% static '/vendor/jquery/script.js' %}"></script> -->
+</body>
+</html>

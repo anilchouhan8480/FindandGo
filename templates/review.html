@@ -1,0 +1,142 @@
+{% extends 'category.html' %}
+{% load static %}
+
+		{% block 'title' %}
+		Review
+		{% endblock %}
+
+
+	{% block 'extralink' %}
+		<link href="{% static 'css/review.css' %}" rel="stylesheet">
+		<link href="{% static 'css/barbar.css' %}" rel="stylesheet">
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script> -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+	{% endblock %}
+
+{% block 'maindata' %}
+<br>
+
+<div class="container-fluid">
+	<br>
+    <div class="container">
+       	<div class="col-md-9">
+            <h1 class="body_m">Your First Review Aawits  </h1>
+            <p style="font-size: 20px"> Review your favorite businesses and share your experiences with our community. </p>
+
+            <div class="u-space-9 border-9 arrange-9 gutter-9">
+                <form class="form-box">
+                   	<input type="text" class="search-field business" placeholder="Business, Service..">
+                    <input type="text" class="search-field location" placeholder="Location">
+                    <button class="search-btn" type="button">Search</button>  
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'images/seaerch_home.png' %}">
+        </div>
+
+    </div>
+    <br><br><br><br>
+</div>
+<br><br><br><br><br><br>
+
+<div class="container-fluid">
+	<div class="container">
+		{% for i in Bobj %}
+		<div class="col-md-6 col-sm-12">
+			<div class="container border_color ">
+				<div class="ynra-card layout-wrap ">
+					<div class="col-md-4">
+									
+						<img class="image-wrapper" style="width: 140%" src="{{ i.biz_img.url }}">
+			        </div>
+			        <div class="col-md-8 ynra-card-body u-padding "><a class="" href="#"  id="" ></a>
+									 
+						<h6 class="heading--h3">{{i.business_name}}</h6>
+						<h5 class="p_had" >Phone No. : {{i.mobile}}</h5>
+
+
+						<form method="POST" id="form1" action="" enctype="multipart/form-data" style="margin-left: 168px;">	
+							 	{% csrf_token %}
+
+<!-- 						<div class="star-rating">
+							<input id="star-5" type="radio" name="rating" value="5" />
+							<label for="star-5" title="5 stars">
+							    <i class="active fa fa-star" aria-hidden="true"></i>
+							</label>
+							<input id="star-4" type="radio" name="rating" value="4" />
+							<label for="star-4" title="4 stars">
+							    <i class="active fa fa-star" aria-hidden="true"></i>
+							</label>
+							<input id="star-3" type="radio" name="rating" value="3" />
+							<label for="star-3" title="3 stars">
+							   	<i class="active fa fa-star" aria-hidden="true"></i>
+							</label>
+							<input id="star-2" type="radio" name="rating" value="2" />
+							<label for="star-2" title="2 stars">
+							    <i class="active fa fa-star" aria-hidden="true"></i>
+							</label>
+							<input id="star-1" type="radio" name="rating" value="1" />
+							<label for="star-1" title="1 star">
+								<i class="active fa fa-star" aria-hidden="true"></i>
+							</label>
+						</div> -->
+							<div>
+							     Review :
+							     <input type="radio" name="rating" value="1">1 Star 
+							     <input type="radio" name="rating" value="2">2 Star 
+							     <input type="radio" name="rating" value="3">3 Star 
+							     <input type="radio" name="rating" value="4">4 Star 
+							     <input type="radio" name="rating" value="5">5 Star 
+							       <br> 
+							 </div>
+						</div>
+					</div>
+								<div class="form-group">
+									<textarea style="margin-top: 16px;" name="msg" class="form-control" id="exampleFormControlTextarea1" placeholder="Share Your amazing thoughts about this Business..." rows="2"></textarea>
+								</div>
+										<input type="Submit" class="btn btn-danger btn-block" class="submit_btn" value="submit" name="submit" id="submit" />
+						</form>
+					</div>	
+			<br><br><br>
+		</div>	
+		{% endfor %}
+
+	</div>
+</div>
+
+<!-- ----------- -->
+
+<!-- <script>
+
+$(function() {
+    $("div.star-rating > s, div.star-rating-rtl > s").on("click", function(e) {
+
+    // remove all active classes first, needed if user clicks multiple times
+    $(this).closest('div').find('.active').removeClass('active');
+
+    $(e.target).parentsUntil("div").addClass('active'); // all elements up from the clicked one excluding self
+    $(e.target).addClass('active');  // the element user has clicked on
+
+
+        var numStars = $(e.target).parentsUntil("div").length+1;
+        $('.show-result').text(numStars + (numStars == 1 ? " star" : " stars!"));
+    });
+});
+
+</script> -->
+
+<!-- --------- -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{% static 'jquery/jquery.js' %}"></script>
+{% endblock %}
+

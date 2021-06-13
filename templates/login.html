@@ -1,0 +1,74 @@
+{% extends 'category.html' %}
+{% load static %}
+
+      {% block 'title' %}
+    Login
+    {% endblock %}
+  <!-- Custom styles for this template -->
+{% block 'extralink' %}
+   <link href="{% static 'css/login.css' %}" rel="stylesheet">
+{% endblock %}
+</head>
+<body>
+
+
+<!-- 	    <header class="head topline-controller">
+  <div class="logoclass">
+    <a href="/home/" class="logo">Find&Go</a>
+  </div> 
+  <nav>
+    <ul>
+      <li class="ul_li"><a class="li_a" href="/home/">Home</a></li>
+      <li class="ul_li"><a class="li_a" href="/provider/register/">Create a Business</a></li>
+      <li class="ul_li"><a class="li_a" href="/mainsite/contact/">Contact</a></li>
+
+    </ul>
+  </nav>
+</header><br><br><br><br><br><br><br><br> -->
+
+{% block 'maindata' %}
+
+<div>
+   {% for message in messages %}
+
+        <div class="alert alert-success alert-dismissible" style="margin-top: -62px; font-size: 20px; ">
+            <a class="close " aria-label="close" href="#" data-dismiss="alert">×</a>
+
+           	{{ message }}
+
+    {% endfor %}
+    </div>  
+
+ 
+<div class="contact-form">
+	<img alt="" class="avatar" src="{% static 'images/flogo1.jpg' %}">
+	<h2>Login Page</h2>
+	<form method="POST">
+		{% csrf_token %}
+			<p>UserName</p><input placeholder="Enter UserId" type="text" name="username" class="uname" required>
+			<p>Password</p><input placeholder="Enter Password" type="password"  name="pwd">
+<!-- 			{% if form.non_field_errors %}
+				{% for error in form.non_field_errors %}
+					<p>{{error}}</p>
+				{% endfor %}
+			{% endif %}		
+		{% for i in form %}
+			{{i.label_tag}} {{i}} {{i.errors|striptags}} <br><br>
+		{% endfor %} -->
+
+		<input type="submit" id="submit" value="login" >
+		<p><input type="checkbox">Remember Me</p>
+	</form>
+</div>
+
+{% endblock %}        	
+
+
+<script src="{% static 'jquery/jquery.js' %}"></script>
+<script src="{% static 'jquery/script.js' %}"></script>
+<script src="{% static 'jquery/jquery.min.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</body>
+</html>
